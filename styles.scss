@@ -9,7 +9,7 @@ $border-radius: 12px;
 $card-padding: 20px;
 $transition-speed: 0.3s;
 
-// Миксин для градиентного фона
+// Миксин 1
 @mixin gradient-bg($color1, $color2) {
     background: linear-gradient(
         135deg, 
@@ -18,7 +18,7 @@ $transition-speed: 0.3s;
     );
 }
 
-// Миксин для тени карточки
+// Миксин 2
 @mixin card-shadow($hover: false) {
     @if $hover {
         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
@@ -27,7 +27,7 @@ $transition-speed: 0.3s;
     }
 }
 
-// Миксин для адаптивного изображения
+// Миксин 3
 @mixin responsive-image {
     width: 100%;
     height: auto;
@@ -35,7 +35,6 @@ $transition-speed: 0.3s;
     border-radius: $border-radius $border-radius  0 0;
 }
 
-// Базовые стили
 * {
     margin: 0;
     padding: 0;
