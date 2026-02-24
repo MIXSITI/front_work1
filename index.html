@@ -2,253 +2,41 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" 
+        content="width=device-width, initial-scale=1.0">
     <title>Кобылянский</title>
-    <style>
-        /* SASS */
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --accent-color: #e74c3c;
-            --bg-light: #ecf0f1;
-            --text-dark: #2c3e50;
-            --text-light: #7f8c8d;
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --border-radius: 12px;
-            --transition-speed: 0.3s;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-            background: #f5f5f5;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
-        }
-
-        /* Миксин 1 */
-        .box-shadow {
-            box-shadow: 0 10px 30px var(--shadow-color);
-        }
-
-        .box-shadow-hover {
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-        }
-
-        /* Миксин 2 */
-        .smooth-transition {
-            transition: all var(--transition-speed) ease;
-        }
-
-        
-        .product-card {
-            background: white;
-            border-radius: var(--border-radius);
-            max-width: 400px;
-            width: 100%;
-            overflow: hidden;
-            box-shadow: 0 2px 8px var(--shadow-color);
-            transition: all var(--transition-speed) ease;
-            border: 1px solid #e0e0e0;
-        }
-
-        .product-card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        }
-
-        
-        .product-card__image-container {
-            position: relative;
-            width: 100%;
-            height: 250px;
-            overflow: hidden;
-            background: var(--bg-light);
-        }
-
-        .product-card__image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .product-card__badge {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            background: var(--accent-color);
-            color: white;
-            padding: 6px 12px;
-            border-radius: 4px;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-
-        .product-card__content {
-            padding: 20px;
-        }
-
-        .product-card__category {
-            color: var(--primary-color);
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            margin-bottom: 6px;
-        }
-
-        .product-card__title {
-            font-size: 20px;
-            color: var(--text-dark);
-            font-weight: 600;
-            margin-bottom: 10px;
-            line-height: 1.3;
-        }
-
-        .product-card__description {
-            color: var(--text-light);
-            font-size: 13px;
-            line-height: 1.5;
-            margin-bottom: 16px;
-        }
-
-        .product-card__footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 16px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .product-card__price {
-            font-size: 24px;
-            font-weight: 600;
-            color: var(--secondary-color);
-        }
-
-        .product-card__price-currency {
-            font-size: 16px;
-            color: var(--text-light);
-            margin-left: 4px;
-        }
-
-        /* Миксин 3 */
-        .product-card__button {
-            background: var(--primary-color);
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
-            font-size: 13px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all var(--transition-speed) ease;
-        }
-
-        .product-card__button:hover {
-            background: #2980b9;
-        }
-
-        .product-card__button:active {
-            transform: scale(0.98);
-        }
-
-        .info-box {
-            background: white;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 16px;
-            max-width: 400px;
-            box-shadow: 0 2px 8px var(--shadow-color);
-            border: 1px solid #e0e0e0;
-        }
-
-        .info-box__title {
-            font-size: 14px;
-            font-weight: 600;
-            color: var(--secondary-color);
-            margin-bottom: 10px;
-        }
-
-        .info-box__list {
-            list-style: none;
-        }
-
-        .info-box__item {
-            color: var(--text-light);
-            font-size: 12px;
-            margin-bottom: 6px;
-            padding-left: 18px;
-            position: relative;
-        }
-
-        .info-box__item:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--primary-color);
-            font-weight: bold;
-        }
-
-        @media (max-width: 480px) {
-            .product-card__title {
-                font-size: 20px;
-            }
-            
-            .product-card__price {
-                font-size: 24px;
-            }
-            
-            .product-card__button {
-                padding: 10px 20px;
-                font-size: 12px;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div style="max-width: 400px; width: 100%;">
+    <div class="container">
         <div class="product-card">
-            <div class="product-card__image-container">
-                <img 
-                    class="product-card__image" 
-                    src = product.jpg
-                    alt="AirPods Pro 2"
-                >
-                <div class="product-card__badge">Новинка</div>
+            <div class="product-card__image">
+                <img src="product.jpg" 
+                    alt="Беспроводные наушники">
+                <span class="product-card__badge">
+                    Хит продаж
+                </span>
             </div>
-            
             <div class="product-card__content">
-                <div class="product-card__category">Аудиотехника</div>
-                <h2 class="product-card__title">AirPods Pro 2 Премиальные</h2>
+                <h2 class="product-card__title">
+                    Беспроводные наушники WH-1000XM5
+                </h2>
                 <p class="product-card__description">
-                    Беспроводные наушники с активным шумоподавлением, 
-                    поддержка iOS17, беспроводная зарядка кейса. 
-                    В комплекте чехол и блок. Идеальное качество звука.
+                    Премиальные наушники с активным 
+                    шумоподавлением, 30 часов автономной 
+                    работы и превосходным качеством звука.
                 </p>
-                
-                <div class="product-card__footer">
-                    <div>
-                        <span class="product-card__price">17 990</span>
-                        <span class="product-card__price-currency">₽</span>
-                    </div>
-                    <button class="product-card__button" onclick="addToCart()">В корзину</button>
+                <div class="product-card__price">
+                    <span class="product-card__price-current">
+                        24 990 ₽
+                    </span>
+                    <span class="product-card__price-old">
+                        29 990 ₽
+                    </span>
                 </div>
-            </div>
-        </div>
-
-        <div class="info-box">
-            <h3 class="info-box__title"> Кобылянский Сергей </h3>
+                    <button class="product-card__button" onclick="addToCart()">В корзину</button>            </div>
         </div>
     </div>
-
     <script>
         function addToCart() {
             const button = event.target;
