@@ -1,5 +1,7 @@
 ﻿# front_work1
-<img width="1753" height="1066" alt="image" src="https://github.com/user-attachments/assets/257e3a68-6d3e-47a4-a189-0182e0f85650" />
+ <img width="1334" height="921" alt="image" src="https://github.com/user-attachments/assets/6cd00512-d0d9-4969-ae30-3b02c1cce355" />
+
 после нажатия на "В корзину"
-<img width="1762" height="1087" alt="image" src="https://github.com/user-attachments/assets/c0c4925b-3c67-4666-a726-211d6b32ad90" />
+
+<img width="1405" height="1016" alt="image" src="https://github.com/user-attachments/assets/424c8b38-2ceb-4535-b5c2-fc92fd4c5904" />
 
